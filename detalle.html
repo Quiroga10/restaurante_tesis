@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Pedido</title>
+    <style>
+        :root {
+            --white: #FFFFFf;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --boleta: #EC9B3B;
+            --factura: #F24C4C;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .product-detail {
+            width: 25%;
+            padding: 24px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 190px;
+            margin-left: 250px;
+        }
+
+        .title-container {
+            display: flex;
+        }
+
+        .title-container img {
+            /*flecha invertida*/
+            transform: rotate(-180deg);
+            margin-right: 14px;
+        }
+
+        .title {
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+
+        .order {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 24px;
+            border-radius: 8px;
+            padding: 0 24px;
+        }
+
+        .order p:nth-child(1) {
+            /*6 articles abajo de 03.25.21*/
+            display: flex;
+            flex-direction: column;
+        }
+
+        .order p:nth-child(2) {
+            /*$560.00 se coloca hacia la derecha*/
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .order p span:nth-child(1) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .shopping-cart {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+        }
+
+        .shopping-cart figure {
+            margin: 0;
+        }
+
+        .shopping-cart figure img {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .shopping-cart p:nth-child(2) {
+            color: var(--very-light-pink);
+        }
+
+        .shopping-cart p:nth-child(3) {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+
+        .opcion-1 {
+            display: grid;
+            align-items: center;
+            margin: 10px;
+            /* background-color: var(--factura); */
+            margin-left: 1150px;
+            margin-top: 368px;
+        }
+
+        .boleta-button {
+            background-color: var(--boleta);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 15%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px
+        }
+
+        .factura-button {
+            background-color: var(--factura);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 15%;
+            height: 50px;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        .container-opcion1 {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            margin-top: -739px;
+            margin-left: 550px;
+        }
+
+        .form-container {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+            justify-self: center;
+        }
+
+        .title {
+            font-size: var(--lg);
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .label {
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .input {
+            background-color: var(--text-input-field);
+            border: none;
+            border-radius: 8px;
+            height: 30px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+
+        .login-button {
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width:640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        let orden = JSON.parse(sessionStorage.getItem("data"));
+    </script>
+</head>
+
+<body>
+    <aside class="product-detail">
+        <div class="title-container">
+            <img src="flechita.svg" class="backArrow" alt="arrow">
+            <p class="title">Mi Orden</p>
+        </div>
+        <div class="my-order-content">
+            <!-- se agrega dinamicamente el detalle de orden -->
+        </div>
+    </aside>
+    <div class="opcion-1">
+        <button class="boleta-button">
+            Boleta
+        </button>
+        <button class="factura-button">
+            Factura
+        </button>
+    </div>
+    <div class="container-opcion1">
+        <div class="form-container">
+            <img src="logo.png" alt="logo" class="logo">
+            <h1 class="title">Hola</h1>
+
+            <form action="#" class="form">
+                <label for="new-password" class="label title-user">DNI</label>
+                <input type="text" required id="password" placeholder="Digite su documento de identidad"
+                    class="input input-password documentNumber">
+
+                <input type="submit" value="Confirmar" class="primary-button login-button" />
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+        import { getDatabase, ref, get, child, set }
+            from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+
+
+        /*         if (location.href.indexOf('reload')==-1)
+     {
+        location.href=location.href+'?reload';
+     }*/
+
+        window.onload = (e) => {
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyBBwG2Tk2bi_IMChAVgb1cq5CsedZCIRpM",
+                authDomain: "mesa-inteligente-jugueria.firebaseapp.com",
+                databaseURL: "https://mesa-inteligente-jugueria-default-rtdb.firebaseio.com",
+                projectId: "mesa-inteligente-jugueria",
+                storageBucket: "mesa-inteligente-jugueria.appspot.com",
+                messagingSenderId: "716803130485",
+                appId: "1:716803130485:web:d4d8950afe6de0e7d5643c",
+                measurementId: "G-4B05X5539H"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+            const db = getDatabase();
+
+            const divContainer = document.querySelector(".my-order-content");
+
+            const btnBoleta = document.querySelector(".boleta-button");
+            const btnFactura = document.querySelector(".factura-button");
+
+            const titleUser = document.querySelector(".title-user");
+            const btnConfirm = document.querySelector(".login-button");
+
+            let total = 0.0;
+
+            function pintarOrden() {
+                limpiarHTML(divContainer)
+
+                orden.forEach(order => {
+                    const div = document.createElement("div");
+                    div.classList.add("shopping-cart");
+
+                    const figure = document.createElement("figure");
+                    const productImg = document.createElement("img");
+                    productImg.src = order.urlImage;
+                    productImg.alt = order.nombreProducto;
+                    figure.append(productImg);
+
+                    const pTitle = document.createElement("p");
+                    pTitle.innerText = order.nombreProducto;
+
+                    const pPrice = document.createElement("p");
+                    pPrice.innerText = `S/${order.precioProducto} [${order.cantidadProducto}]`
+
+                    const imgDelete = document.createElement("img");
+                    imgDelete.src = "icon_close.png";
+                    imgDelete.alt = "close";
+                    imgDelete.style.cursor = "pointer";
+
+                    const imgDeleteClick = document.createElement("a");
+                    imgDeleteClick.href = "#";
+                    imgDeleteClick.classList.add("btnClickDelete")
+                    imgDeleteClick.style.backgroundImage = "flechita.svg";
+                    imgDeleteClick.style.border = 0;
+                    imgDeleteClick.style.backgroundColor = "transparent";
+
+                    imgDeleteClick.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        alert("hola")
+                    })
+
+                    imgDeleteClick.append(imgDelete);
+
+                    div.prepend(imgDeleteClick);
+                    div.prepend(pPrice);
+                    div.prepend(pTitle);
+                    div.prepend(figure);
+
+                    total = total + (order.precioProducto * order.cantidadProducto);
+                    divContainer.append(div);
+                });
+
+                divContainer.innerHTML += ` <div class="order">
+                                        <p>
+                                            <span>Total</span>
+                                        </p>
+                                        <p>S/${total}</p>
+                                    </div>`
+
+
+                document.querySelectorAll(".btnClickDelete").forEach(btn => {
+                    btn.addEventListener("click", (e) => {
+
+                        const parent = btn.parentElement;
+                        const productTitle = parent.childNodes[1].innerText
+                        orden = orden.filter(o => o.nombreProducto != productTitle)
+
+                        console.log(orden)
+                        pintarOrden()
+                    })
+                })
+            }
+
+            function main() {
+                pintarOrden()
+
+                btnBoleta.addEventListener("click", (e) => {
+                    titleUser.innerText = "DNI"
+                    document.querySelector(".documentNumber")
+                        .placeholder = "Digite su documento de identidad";
+                });
+                btnFactura.addEventListener("click", (e) => {
+                    titleUser.innerText = "RUC";
+                    document.querySelector(".documentNumber")
+                        .placeholder = "Digite su RUC";
+                });
+
+                btnConfirm.addEventListener("click", (e) => guardarOrdenes(e));
+
+                document.querySelector(".backArrow")
+                    .addEventListener("click", (e) => {
+                        window.location = "index2.html";
+                    })
+
+            }
+
+
+            function guardarOrdenesBD() {
+                const documentNumber = document.querySelector(".input-password").value;
+                //orden.forEach((producto) => {
+                set(ref(db, `Orders/${documentNumber}/`), orden)
+                    .then(data => {
+                        //alert("todo ok")
+                    }).catch(err => {
+                        alert("Error: " + err)
+                    })
+
+                //})
+            }
+
+            function guardarOrdenes(e) {
+                e.preventDefault();
+
+                if (orden.length != 0) {
+                    orden = orden.map(({ nombreProducto, precioProducto, cantidadProducto }) => {
+                        return {
+                            nombreProducto,
+                            precioProducto,
+                            cantidadProducto
+                        }
+                    })
+
+                    orden['monto_total'] = total;
+
+                    guardarOrdenesBD();
+                    //console.log(orden)
+                    alert("Pedido registrado exitosamente, la pagina se redireccionará en 3 segundos..");
+
+                    setTimeout((e) => {
+                        window.location = "codigo.html";
+                    }, 3000)
+                } else {
+                    alert("Debe de tener productos en la lista!")
+                }
+            }
+
+
+            function limpiarHTML(divContainer) {
+                divContainer.innerHTML = ""
+                total = 0;
+            }
+
+
+            main()
+
+        }
+
+    </script>
+</body>
+
+</html>

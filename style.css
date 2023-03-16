@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+.form{
+    background: white;
+    width: 1000px;
+    height: 800px;
+    border-radius:8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(50vh - 220px) auto;
+    padding: 110px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+h2{
+    font-size: 3rem;
+    margin-left: 250px;
+    padding-bottom: 10px;
+    width: 480px;
+    color: grey;
+    border-bottom: 3px solid #000;
+}
+.Codigo_Pedido{
+    font-size: 10rem;
+    padding-left: 248px;
+}
+.Gracias{
+    font-size: 1.5rem;
+    margin-left: 60px;
+}

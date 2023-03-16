@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codigo de Pedido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="form">
+
+        <h2>Codigo de Pedido</h2>
+
+        <p class="Codigo_Pedido">
+            C0001
+        </p>
+
+        <div>
+            <span class="Gracias">
+                Muchas gracias por su compra,
+                en unos momentos llegara su pedido
+            </span>
+        </div>
+    </form>
+
+    <script>
+        function padLeadingZeros(num, size) {
+            var s = num + "";
+            while (s.length < size) s = "0" + s;
+            return s;
+        }
+        function random(min, max) {
+            return Math.floor((Math.random() * (max - min + 1)) + min);
+        }
+
+        document.querySelector(".Codigo_Pedido")
+            .innerText = "C" + padLeadingZeros(random(1, 9000), 4)
+    </script>
+</body>
+
+</html>

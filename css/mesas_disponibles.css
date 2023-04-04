@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.container_aside {
+  width: 35rem;
+  height: 40vh;
+  padding: 11rem;
+  display: grid;
+  place-items: center;
+  grid-auto-columns: 20rem;
+  grid-template-rows: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: -7rem;
+  text-align: center;
+}
+
+.logo_jugueria {
+  width: 28.5rem;
+  height: 28.5rem;
+}
+
+button {
+  width: 20.5rem;
+  height: 10.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 3.4rem;
+}
+
+header .fa-arrow-left {
+  font-size: 7.2rem;
+  line-height: 6.6rem;
+}
+
+main .container_globalMesas {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+main .container_globalMesas section .container_mesas {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-auto-rows: 60rem;
+}
+main .container_globalMesas section .container_mesas .container_mesa {
+  display: grid;
+  grid-template-columns: 25rem;
+  grid-template-rows: 1fr 2fr;
+  place-items: center;
+}
+main .container_globalMesas section .container_mesas .container_mesa .btn_mumAsiento {
+  background-color: rgb(203, 203, 203);
+}
+main .container_globalMesas section .container_mesas .container_mesa .mesas_button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .container_globalMesas section .container_mesas .container_mesa .mesas_button .img_mesas {
+  position: relative;
+}
+main .container_globalMesas section .container_mesas .container_mesa .mesas_button .button_estado {
+  position: absolute;
+  margin-top: 10rem;
+  background-color: rgb(156, 195, 138);
+}
+main .container_globalMesas section .container_mesas .container_mesa .mesas_button .button-f2 {
+  position: absolute;
+  margin-top: 7rem;
+  background-color: rgb(156, 195, 138);
+}
+main .container_globalMesas section .container_mesas .container_mesa .mesas_button .btn-mesa_ocho {
+  margin-top: 18rem;
+}
+
+/*# sourceMappingURL=mesas_disponibles.css.map */

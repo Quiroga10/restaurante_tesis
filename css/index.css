@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.container_aside {
+  width: 35rem;
+  height: 40vh;
+  padding: 11rem;
+  display: grid;
+  place-items: center;
+  grid-auto-columns: 20rem;
+  grid-template-rows: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: -7rem;
+  text-align: center;
+}
+
+.logo_jugueria {
+  width: 28.5rem;
+  height: 28.5rem;
+}
+
+button {
+  width: 20.5rem;
+  height: 10.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 3.4rem;
+}
+
+header {
+  width: 100%;
+  height: 15rem;
+  background-color: antiquewhite;
+  margin-bottom: 2.5rem;
+}
+header h1 {
+  text-align: center;
+  font-size: 8rem;
+  line-height: 6rem;
+  padding: 5rem;
+}
+
+.container_global {
+  display: flex;
+}
+.container_global .container_asideGlobal {
+  width: 30rem;
+  height: auto;
+}
+.container_global .container_asideGlobal .container-category {
+  display: grid;
+  grid-template-columns: 32rem;
+  grid-template-rows: repeat(8, 14rem);
+  gap: 2rem;
+  place-items: center;
+}
+.container_global .container_asideGlobal .container-category li {
+  list-style: none;
+  width: 28rem;
+}
+.container_global .container_asideGlobal .container-category li .category-ico {
+  width: 10rem;
+  height: 10rem;
+}
+.container_global .container_asideGlobal .container-category li h3 {
+  font-size: 2.5rem;
+}
+.container_global section .carousel {
+  width: 85%;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.container_global section .carousel .carousel-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container_global section .carousel .carousel-row .carousel-item {
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+}
+.container_global section .carousel .carousel-row .carousel-item img {
+  max-width: 100%;
+  width: 25rem;
+  height: 20rem;
+  margin-bottom: 10px;
+}
+.container_global section .carousel .carousel-row .carousel-item h3 {
+  font-size: 3rem;
+}
+.container_global section .carousel .carousel-row .carousel-item p {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+.container_global section .carousel .carousel-row .carousel-item .add-to-cart {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.container_global section .container_ordenPedido {
+  width: 100%;
+  height: auto;
+  background-color: red;
+}
+.container_global section .container_ordenPedido h2 {
+  text-align: center;
+  font-size: 6rem;
+}
+.container_global section .container_ordenPedido hr {
+  margin-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 640px;
+  border-top-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+.container_global section .container_ordenPedido .resumen_ordenPedido {
+  display: flex;
+  gap: 5rem;
+}
+
+/*# sourceMappingURL=index.css.map */

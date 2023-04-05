@@ -103,65 +103,49 @@ header h1 {
   margin-bottom: 10px;
   cursor: pointer;
 }
-.container_global .shopping-cart .container h1 {
-  text-align: center;
-  font-size: 8rem;
-  font-weight: 100;
-}
-.container_global .shopping-cart .container hr {
-  margin-left: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  max-width: 640px;
-  border-top-style: solid;
-  border-top-color: rgba(0, 0, 0, 0.1);
-}
-.container_global .shopping-cart .container table {
-  width: 100%;
-  font-size: 3.5rem;
-}
-.container_global .shopping-cart .container input[type=text] {
-  text-align: center;
-}
-.container_global .shopping-cart .container table td {
-  width: 20% !important;
-}
-
-.row {
-  max-width: 60%;
-}
-
-.shopping-cart-items {
-  padding: 10px 0px;
-}
-
-.shopping-cart-header {
-  border-bottom: 1px solid #ccc;
-}
-
-.shopping-cart-image {
-  max-width: 15px;
-  border-radius: 20px;
-}
-
-.shopping-cart-quantity-input {
-  max-width: 45px;
+.container_global .shopping-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #eee;
-  padding: 5px;
+  padding: 1rem;
+  max-width: 900px;
+  width: 100%;
 }
-
-.shopping-cart-total {
-  min-height: 96px;
+.container_global .shopping-cart h2 {
+  font-size: 8rem;
 }
-
-.order-actions {
-  margin-left: 50px;
+.container_global .shopping-cart .shopping-info {
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  justify-items: center;
+  gap: 0rem;
 }
-
-p {
-  text-align: center;
+.container_global .shopping-cart .cart-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 3.5rem;
+  padding: 7rem;
+}
+.container_global .shopping-cart .cart-items .cart-item {
+  width: 40rem;
+  display: flex;
+  gap: 12rem;
+  margin-bottom: 2rem;
+}
+.container_global .shopping-cart p {
+  margin-right: 10rem;
+  font-size: 18px;
+  font-weight: bold;
+  font-size: 4rem;
+}
+.container_global .shopping-cart p .cart-total {
+  margin-top: 20px;
+  font-size: 4rem;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -54,19 +54,19 @@
         <section>
             <div class="carousel">
                 <div class="carousel-row">
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-producto="cafe con leche" data-precio="10">
                         <img src="./assets/img/comidas/cafe_con_leche.jpeg" alt="café con leche">
                         <h3 class="item_title">Café con Leche</h3>
                         <p>Precio: $10</p>
                         <button class="add-to-cart">Agregar al carrito</button>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-producto="coca cola 2.5lt" data-precio="15">
                         <img src="./assets/img/comidas/Coca Cola 2-5lt.jpg" alt="Producto 2">
                         <h3 class="item_title">Coca Cola 2.5lt</h3>
                         <p>Precio: $15</p>
                         <button class="add-to-cart">Agregar al carrito</button>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" data-producto="Galleta chispas de chocolate" data-precio="20">
                         <img src="./assets/img/comidas/galleta_chocolate.jpg" alt="Producto 3">
                         <h3 class="item_title">Galletas Chocolates</h3>
                         <p>Precio: $20</p>
@@ -147,35 +147,22 @@
                 </div>
             </div>
         </section>
-        <section class="shopping-cart">
-            <div class="container">
-                <h1>Orden de Pedido</h1>
-                <hr>
-                <table class="table table-sm">
-                    <thead>
-                        <tr>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Cantidad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                    <div class="li-container">
-                        <ul>
-
-                        </ul>
-                    </div>
-                    <th scope="col" class="montoTotal">Monto Total:</th>
-                </table>
-
-                <div>
-                    <button class="btn btn-primary" id="generarOrden">Generar Orden</button>
-                </div>
+        <aside class="shopping-cart">
+            <h2>Orden de Pedido</h2>
+            <div class="shopping-info">
+                <p>Producto</p>
+                <p>Precio</p>
+                <p>Cantidad</p>
             </div>
-        </section>
+            <ul class="cart-items">
+            </ul>
+            <p>
+                Total: $
+                <span class="cart-total">0</span>
+            </p>
+        </aside>
     </main>
     <script src="./js/crear_contenido.js"></script>
+    <script src="./js/interaccion_carrito.js"></script>
 </body>
 </html>

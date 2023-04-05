@@ -1,0 +1,57 @@
+@import "../sass/globales.scss";
+@import "../sass/codigo_repeat.scss";
+
+
+header{
+    .fa-arrow-left {
+        font-size: 7.2rem;
+        line-height: 6.6rem;
+    }
+}
+
+main{
+    .container_globalMesas {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        align-items: center;
+        section{
+            .container_mesas {
+                display: grid;
+                grid-template-columns: repeat(4, 2fr);
+                grid-auto-rows: 60rem;
+                .container_mesa {
+                    display: grid;
+                    grid-template-columns: 25rem;
+                    grid-template-rows: 1fr 2fr;
+                    place-items: center;
+                    .btn_mumAsiento {
+                        background-color: rgb(203, 203, 203);
+                    }
+                    .mesas_button {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .img_mesas {
+                            position: relative;
+                        }
+                        .button_estado {
+                            position: absolute;
+                            margin-top: 10rem;
+                            background-color: rgb(156, 195, 138);
+                        }
+                        .button-f2 {
+                            position: absolute;
+                            margin-top: 7rem;
+                            background-color: rgb(156, 195, 138);
+                        }
+                        .btn-mesa_ocho {
+                            margin-top: 18rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+  /*# sourceMappingURL=mesas_disponibles.css.map */

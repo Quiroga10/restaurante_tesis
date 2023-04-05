@@ -12,6 +12,14 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+button {
+  width: 20.5rem;
+  height: 10.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 3.4rem;
+}
+
 .container_aside {
   width: 35rem;
   height: 40vh;
@@ -28,14 +36,6 @@ body {
 .logo_jugueria {
   width: 28.5rem;
   height: 28.5rem;
-}
-
-button {
-  width: 20.5rem;
-  height: 10.5rem;
-  border-radius: 1.5rem;
-  border: none;
-  font-size: 3.4rem;
 }
 
 header .fa-arrow-left {
@@ -83,5 +83,7 @@ main .container_globalMesas section .container_mesas .container_mesa .mesas_butt
 main .container_globalMesas section .container_mesas .container_mesa .mesas_button .btn-mesa_ocho {
   margin-top: 18rem;
 }
+
+
 
 /*# sourceMappingURL=mesas_disponibles.css.map */

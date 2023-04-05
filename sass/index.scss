@@ -14,7 +14,8 @@ header{
 }
 
 .container_global{
-    display: flex;
+    display: grid;
+    grid-template-columns: 33.3rem 242.3rem 105.3rem;
     .container_asideGlobal{
         width: 30rem;
         height: auto;
@@ -27,12 +28,16 @@ header{
             li{
                 list-style: none;
                 width: 28rem;
+                margin-left: 8rem;
+                margin-top: 8rem;
                 .category-ico{
                     width: 10rem;
                     height: 10rem;
                 }
                 h3{
                     font-size:2.5rem;
+                    margin-right: 16rem;
+                    margin-left: 1rem;
                 }
             }
         }
@@ -41,6 +46,7 @@ header{
         .carousel {
             width: 85%;
             overflow: hidden;
+            margin: 0 auto;
             margin-bottom: 50px;
             .carousel-row {
                 display: flex;
@@ -55,7 +61,7 @@ header{
                         height: 20rem;
                         margin-bottom: 10px;
                     }
-                    h3{
+                    .item_title{
                         font-size: 3rem;
                     }
                     p{
@@ -78,16 +84,12 @@ header{
             }
         }
     }
-    section{
-        .container_ordenPedido{
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: right;
-            background-color:red;
-            h2{
-                text-align:center;
-                font-size: 6rem;
-                margin-top: 0;
+    .shopping-cart{
+        .container{
+            h1{
+                text-align: center;
+                font-size: 8rem;
+                font-weight: 100;
             }
             hr{
                 margin-left: 0;
@@ -97,30 +99,49 @@ header{
                 border-top-style: solid;
                 border-top-color: rgba(0, 0, 0, 0.1);
             }
-            .resumen_ordenPedido{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom:1rem;
-                gap: 5rem;
-                .title_producto .title_precio, .title_producto .title_cantidad {
-                    margin: 0;
-                }
+            table {
+                width: 100%;
+                font-size: 3.5rem;
             }
-            .title_montoTotal{
-                font-weight: bold;
+            input[type="text"]{
+                text-align: center;
             }
-            .btn_generarPedido{
-                background-color: #007bff;
-                color: #fff;
-                border: none;
-                padding: 0.5rem 1rem;
-                border-radius: 0.25rem;
-                cursor: pointer;
-                &:hover{
-                    background-color: #0062cc;
-                }
+            table td {
+                width: 20% !important;
             }
         }
     }
+}
+.row{
+    max-width: 60%;
+}
+.shopping-cart-items {
+    padding: 10px 0px;
+}
+
+.shopping-cart-header {
+    border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+    max-width: 15px;
+    border-radius: 20px;
+}
+
+.shopping-cart-quantity-input {
+    max-width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eee;
+    padding: 5px;
+}
+
+.shopping-cart-total {
+    min-height: 96px;
+}
+.order-actions{
+    margin-left:50px;
+}
+p{
+    text-align:center;
 }

@@ -80,8 +80,9 @@ header{
     }
     section{
         .container_ordenPedido{
-            width: 100%;
-            height: auto;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: right;
             background-color:red;
             h2{
                 text-align:center;

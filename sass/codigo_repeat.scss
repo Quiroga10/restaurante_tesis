@@ -1,0 +1,17 @@
+.container_aside {
+    width: 35rem;
+    height: 40vh;
+    padding: 11rem;
+    display: grid;
+    place-items: center;
+    grid-auto-columns: 20rem;
+    grid-template-rows: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: -7rem;
+    text-align: center;
+}
+
+.logo_jugueria {
+    width: 28.5rem;
+    height: 28.5rem;
+}

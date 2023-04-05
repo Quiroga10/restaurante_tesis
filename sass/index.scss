@@ -87,6 +87,7 @@ header{
             h2{
                 text-align:center;
                 font-size: 6rem;
+                margin-top: 0;
             }
             hr{
                 margin-left: 0;
@@ -98,8 +99,27 @@ header{
             }
             .resumen_ordenPedido{
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom:1rem;
                 gap: 5rem;
-
+                .title_producto .title_precio, .title_producto .title_cantidad {
+                    margin: 0;
+                }
+            }
+            .title_montoTotal{
+                font-weight: bold;
+            }
+            .btn_generarPedido{
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 0.25rem;
+                cursor: pointer;
+                &:hover{
+                    background-color: #0062cc;
+                }
             }
         }
     }

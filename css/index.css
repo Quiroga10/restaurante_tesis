@@ -106,6 +106,7 @@ header h1 {
 .container_global section .container_ordenPedido h2 {
   text-align: center;
   font-size: 6rem;
+  margin-top: 0;
 }
 .container_global section .container_ordenPedido hr {
   margin-left: 0;
@@ -117,7 +118,27 @@ header h1 {
 }
 .container_global section .container_ordenPedido .resumen_ordenPedido {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
   gap: 5rem;
+}
+.container_global section .container_ordenPedido .resumen_ordenPedido .title_producto .title_precio, .container_global section .container_ordenPedido .resumen_ordenPedido .title_producto .title_cantidad {
+  margin: 0;
+}
+.container_global section .container_ordenPedido .title_montoTotal {
+  font-weight: bold;
+}
+.container_global section .container_ordenPedido .btn_generarPedido {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.container_global section .container_ordenPedido .btn_generarPedido:hover {
+  background-color: #0062cc;
 }
 
 /*# sourceMappingURL=index.css.map */

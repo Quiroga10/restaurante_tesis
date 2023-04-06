@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+button {
+  width: 20.5rem;
+  height: 10.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 3.4rem;
+}
+
+.product-detail {
+  width: 25%;
+  padding: 24px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 190px;
+  margin-left: 250px;
+}
+.product-detail .title-container {
+  display: flex;
+}
+.product-detail .title-container .title {
+  font-size: var(--lg);
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=detalle_pedido.css.map */

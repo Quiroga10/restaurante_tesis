@@ -70,3 +70,4 @@ function actualizarCarrito() {
 function eliminarItemDelCarrito(index) {
     carrito.splice(index, 1);
 }
+

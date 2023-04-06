@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+button {
+  width: 20.5rem;
+  height: 10.5rem;
+  border-radius: 1.5rem;
+  border: none;
+  font-size: 3.4rem;
+}
+
+.form {
+  background: white;
+  width: 1000px;
+  height: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(45vh - 380px) auto;
+  padding: 110px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  display: grid;
+  align-items: center;
+  align-content: space-between;
+}
+.form h2 {
+  width: 100%;
+  color: grey;
+  border-bottom: 3px solid #000;
+  font-size: 9rem;
+  text-align: center;
+}
+.form .Codigo_Pedido {
+  font-size: 21rem;
+  text-align: center;
+}
+.form button {
+  margin: 0 auto;
+}
+.form .Gracias {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=codigo_generado.css.map */

@@ -1,0 +1,17 @@
+@import "../sass/globales.scss";
+
+.product-detail {
+    width: 25%;
+    padding: 24px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 190px;
+    margin-left: 250px;
+    .title-container {
+        display: flex;
+        .title {
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+    }
+}

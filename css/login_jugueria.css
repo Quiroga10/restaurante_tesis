@@ -22,13 +22,17 @@ button {
   font-size: 3.4rem;
 }
 
+h1 {
+  font-size: 5.5rem;
+}
+
 .container_aside {
-  width: 35rem;
-  height: 40vh;
-  padding: 11rem;
+  width: 42rem;
+  height: auto;
+  padding: 0rem;
   display: grid;
   place-items: center;
-  grid-auto-columns: 20rem;
+  grid-auto-columns: 32rem;
   grid-template-rows: 2fr 1fr 1fr;
   gap: 2rem;
   margin-top: -7rem;
@@ -38,6 +42,7 @@ button {
 .logo_jugueria {
   width: 28.5rem;
   height: 28.5rem;
+  margin: 0 auto;
 }
 
 .fa-arrow-left {
@@ -59,10 +64,11 @@ button {
 .login .form-container .form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 5rem;
 }
 .login .form-container .form .label {
-  font-size: 14px;
+  font-size: 2.4rem;
   font-weight: bold;
   margin-bottom: 0.4rem;
 }
@@ -70,10 +76,11 @@ button {
   background-color: rgba(247, 247, 247, 0.968627451);
   border: none;
   border-radius: 0.8rem;
-  height: 3rem;
-  font-size: 16px;
-  padding: 0.6rem;
-  margin-bottom: 1.2rem;
+  width: 50rem;
+  height: 6rem;
+  font-size: 2.2rem;
+  padding: 13px 15px;
+  margin: 1px 1px 0;
 }
 .login .form-container .form .input-email {
   margin-bottom: 2.2rem;

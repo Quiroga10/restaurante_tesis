@@ -22,13 +22,17 @@ button {
   font-size: 3.4rem;
 }
 
+h1 {
+  font-size: 5.5rem;
+}
+
 .container_aside {
-  width: 35rem;
-  height: 40vh;
-  padding: 11rem;
+  width: 42rem;
+  height: auto;
+  padding: 0rem;
   display: grid;
   place-items: center;
-  grid-auto-columns: 20rem;
+  grid-auto-columns: 32rem;
   grid-template-rows: 2fr 1fr 1fr;
   gap: 2rem;
   margin-top: -7rem;
@@ -38,6 +42,7 @@ button {
 .logo_jugueria {
   width: 28.5rem;
   height: 28.5rem;
+  margin: 0 auto;
 }
 
 .fa-arrow-left {

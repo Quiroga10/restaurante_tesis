@@ -12,9 +12,10 @@
         .form {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             margin-top: 5rem;
             .label {
-                font-size: 14px;
+                font-size: 2.4rem;
                 font-weight: bold;
                 margin-bottom: 0.4rem;
             }
@@ -22,10 +23,11 @@
                 background-color: rgba(247, 247, 247, 0.968627451);
                 border: none;
                 border-radius: 0.8rem;
-                height: 3rem;
-                font-size: 16px;
-                padding: 0.6rem;
-                margin-bottom: 1.2rem;
+                width: 50rem;
+                height: 6rem;
+                font-size: 2.2rem;
+                padding: 13px 15px;
+                margin: 1px 1px 0;
             }
             .input-email {
                 margin-bottom: 2.2rem;

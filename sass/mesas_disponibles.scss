@@ -1,11 +1,16 @@
 @import "../sass/globales.scss";
 @import "../sass/codigo_repeat.scss";
 
+header{
+    padding:4rem;
+}
+
 main{
     .container_globalMesas {
         display: grid;
         grid-template-columns: 1fr 4fr;
         align-items: center;
+        padding: 9rem;
         section{
             .container_mesas {
                 display: grid;

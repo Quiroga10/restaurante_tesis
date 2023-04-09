@@ -19,6 +19,8 @@ header{
 .container_global{
     display: grid;
     grid-template-columns: 33.3rem 242.3rem 105.3rem;
+    zoom: 75%;
+    padding: 10rem;
     .container_asideGlobal{
         width: 30rem;
         height: auto;

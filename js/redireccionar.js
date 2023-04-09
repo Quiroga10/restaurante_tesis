@@ -4,3 +4,6 @@ function redireccionar_mesasDisponibles() {
 function redireccionar_inicio(){
     location.href = "../pages_principal.html";
 }
+function redireccionar_pedidos(){
+    location.href = "../pedidos.html";
+}

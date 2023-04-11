@@ -1,0 +1,12 @@
+{
+    "productos":[
+        {
+            "imagen":"./assets/img/comidas/cafe_con_leche.jpeg",
+            "nombre":"Café con Leche",
+            "precio":"10"
+        },
+        {
+            
+        }
+    ]
+}

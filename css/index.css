@@ -87,6 +87,7 @@ header h1 {
   width: 28rem;
   margin-left: 8rem;
   margin-top: 8rem;
+  cursor: pointer;
 }
 .container_global .container_asideGlobal .container-category li .category-ico {
   width: 10rem;
@@ -121,7 +122,7 @@ header h1 {
 .container_global section .carousel .carousel-row .carousel-item .item_title {
   font-size: 3rem;
 }
-.container_global section .carousel .carousel-row .carousel-item p {
+.container_global section .carousel .carousel-row .carousel-item .item_precio {
   font-size: 2.5rem;
   margin-bottom: 3rem;
 }

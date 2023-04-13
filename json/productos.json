@@ -6,7 +6,39 @@
             "precio":"10"
         },
         {
-            
+            "imagen":"./assets/img/comidas/Coca Cola 2-5lt.jpg",
+            "nombre":"Coca Cola 2.5lt",
+            "precio":"15"
+        },
+        {
+            "imagen":"./assets/img/comidas/galleta_chocolate.jpg",
+            "nombre":"Galletas Chocolates",
+            "precio":"20"
+        },
+        {
+            "imagen":"./assets/img/comidas/Hamburguesa McDonal´s queso.jpeg",
+            "nombre":"Hamburguesa de Queso",
+            "precio":"25"
+        },
+        {
+            "imagen":"./assets/img/comidas/jugo_naranja.jpg",
+            "nombre":"Jugo de Naranja",
+            "precio":"30"
+        },
+        {
+            "imagen":"./assets/img/comidas/jugo_papaya.jpg",
+            "nombre":"Jugo de Papaya",
+            "precio":"30"
+        },
+        {
+            "imagen":"./assets/img/comidas/torta_3_leches.jpeg",
+            "nombre":"Torta 3 leches",
+            "precio":"30"
+        },
+        {
+            "imagen":"./assets/img/comidas/sandwich_milanesa.jpeg",
+            "nombre":"Sandwich milanesa",
+            "precio":"15"
         }
     ]
 }

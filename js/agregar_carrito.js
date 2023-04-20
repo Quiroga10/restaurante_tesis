@@ -12,6 +12,7 @@ fetch('../json/productos.json')
             card.className = 'carousel-item';
             card.setAttribute('data-producto', producto.nombre);
             card.setAttribute('data-precio', producto.precio);
+            card.setAttribute('data-category',producto.categoria);
 
             const img = document.createElement('img');
             img.src = producto.imagen;

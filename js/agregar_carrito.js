@@ -2,16 +2,32 @@
 const containerPreview = document.querySelector('.carousel-row');
 let productos;
 let inicio = 0;
-let total = 0;
+let numpages = 15;
+const paginationButtons = document.querySelectorAll('.container_pages button');
 
-function cargarProductos(numpages = 15) {
+paginationButtons[0].addEventListener('click', function() {
+    inicio = 0;
+    numpages=15;
+    containerPreview.innerHTML = ''; //borramos el contenido anterior
+    cargarProductos(inicio,numpages);
+    console.log("cargarProductos");
+});
+
+paginationButtons[1].addEventListener('click', function() {
+    const currentCarousel = document.querySelector('.carousel-row');
+    //currentCarousel.style.transform = `translateX(-${currentCarousel.clientWidth}px)`;
+    inicio = 15; //agregamos numpages al inicio
+    containerPreview.innerHTML = ''; //borramos el contenido anterior
+    numpages = 21;
+    cargarProductos(inicio,numpages); //cargamos los productos con la nueva posición
+});
+
+function cargarProductos(init,numPage) {
     //realizar la solicitud GET al archivo JSON
     fetch('http://localhost:3100/api/productos')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
-        productos = data.products.slice(0, numpages);
-        total = data.products.length
+        productos = data.products.slice(init, numPage);
         productos.forEach(producto =>{
             const card = document.createElement('div');
             card.className = 'carousel-item';
@@ -22,6 +38,8 @@ function cargarProductos(numpages = 15) {
             img.src = producto.url;
             img.alt = producto.title;
             card.appendChild(img);
+
+            console.log(producto.url);
 
             const nombre_producto = document.createElement('h3');
             nombre_producto.className = 'item_title';
@@ -110,7 +128,7 @@ function cargarProductos(numpages = 15) {
         }
     });
 }
-cargarProductos();
+cargarProductos(inicio,numpages);
 
 //filtrar por categoria
 
@@ -118,15 +136,3 @@ cargarProductos();
 //un nuevo array con los productos filtrados
 //LIMPIAR html del contenedor de productos
 //crear un forEach y pintar
-
-
-
-
-
-
-
-
-
-
-
-

@@ -122,13 +122,43 @@ function cargarProductos(init,numPage) {
                     boton.style.display = 'none';
                 });
             }
+            localStorage.setItem('carrito',JSON.stringify(carrito));
         }
         function eliminarItemDelCarrito(index) {
             carrito.splice(index, 1);
+            localStorage.setItem('carrito',JSON.stringify(carrito));
         }
     });
 }
 cargarProductos(inicio,numpages);
+const btnRealizarPedido = document.getElementById('realizar-pedido');
+btnRealizarPedido.addEventListener('click', () => {
+    // Obtener la información del carrito desde el almacenamiento local
+    const carrito = JSON.parse(localStorage.getItem('carrito'));
+    // Redirigir al usuario a la página "detalle_pedido.html" y pasar la información del carrito como parámetro en la URL
+    window.location.href = `../detalle_pedido.html?carrito=${JSON.stringify(carrito)}`;
+});
+
+// Obtener la información del carrito desde la URL
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const carritoString = urlParams.get('carrito');
+const carrito = JSON.parse(carritoString);
+
+// Mostrar la información del carrito en la página
+const detallePedido = document.getElementById('detalle-pedido');
+carrito.forEach(item => {
+    const detallePedidoItem = document.createElement('div');
+    detallePedidoItem.classList.add('detalle-pedido-item');
+    const detallePedidoItemContenido = `
+        <span class="detalle-pedido-item-title">${item.producto}</span>
+        <span class="detalle-pedido-item-price">S/${item.precio.toFixed(2)}</span>
+        <span class="detalle-pedido-item-quantity">${item.cantidad}</span>
+    `;
+    detallePedidoItem.innerHTML = detallePedidoItemContenido;
+    detallePedido.appendChild(detallePedidoItem);
+});
+
 
 //filtrar por categoria
 

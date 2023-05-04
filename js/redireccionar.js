@@ -7,3 +7,6 @@ function redireccionar_inicio(){
 function redireccionar_pedidos(){
     location.href = "../pedidos.html";
 }
+function redireccionar_detalle_pedidos(){
+    location.href = "../detalle_pedidos.html";
+}

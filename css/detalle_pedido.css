@@ -1,45 +1,85 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-  zoom: 70%;
-  overflow: hidden;
-}
-
-body {
-  font-family: "Quicksand", sans-serif;
-}
-
-button {
-  width: 20.5rem;
-  height: 10.5rem;
-  border-radius: 1.5rem;
-  border: none;
-  font-size: 3.4rem;
-}
-
-h1 {
-  font-size: 5.5rem;
-}
-
-.product-detail {
-  width: 25%;
-  padding: 24px;
-  box-sizing: border-box;
-  position: absolute;
-  top: 190px;
-  margin-left: 250px;
-}
-.product-detail .title-container {
+main .container-section {
   display: flex;
 }
-.product-detail .title-container .title {
-  font-size: var(--lg);
+main .container-section .my-order {
+  width: 53%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  justify-items: start;
+  margin-left: 2rem;
+  zoom: 65%;
+}
+main .container-section .my-order .my-order-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 45rem;
+}
+main .container-section .my-order .my-order-container .title-container {
+  display: flex;
+  gap: 2rem;
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+main .container-section .my-order .my-order-container .my-order-content {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  width: 47rem;
+}
+main .container-section .my-order .my-order-container .my-order-content .order {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  background-color: #F7F7F7;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  padding: 0 24px;
+}
+main .container-section .my-order .my-order-container .my-order-content .order .order-span {
+  /*6 articles abajo de 03.25.21*/
+  display: flex;
+  flex-direction: column;
+}
+main .container-section .my-order .my-order-container .my-order-content .order p:nth-child(2) {
+  /*$560.00 se coloca hacia la derecha*/
+  text-align: end;
   font-weight: bold;
+}
+main .container-section .my-order .my-order-container .my-order-content .order p span:nth-child(1) {
+  font-size: 3rem;
+  font-weight: bold;
+}
+main .container-section .my-order .my-order-container .my-order-content .order p span:nth-child(2) {
+  font-size: 2rem;
+  color: #C7C7C7;
+}
+main .container-section .my-order .my-order-container .shopping-cart {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+  font-size: 3.2rem;
+}
+main .container-section .my-order .my-order-container .shopping-cart figure {
+  margin: 0;
+}
+main .container-section .my-order .my-order-container .shopping-cart figure img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+main .container-section .my-order .my-order-container .shopping-cart .shopping-cart p:nth-child(2) {
+  color: #C7C7C7;
+}
+main .container-section .my-order .my-order-container .shopping-cart .shopping-cart p:nth-child(3) {
+  font-size: 16px;
+  font-weight: bold;
+}
+main .container-section .my-order .my-order-container .shopping-cart .fa {
+  color: red;
 }
 
 /*# sourceMappingURL=detalle_pedido.css.map */

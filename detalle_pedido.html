@@ -4,25 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/detalle_pedido.css">
     <title>Detalle Pedidos</title>
 </head>
 <body>
-    <aside class="shopping-cart">
-        <h2>Orden de Pedido</h2>
-        <div class="shopping-info">
-            <p>Producto</p>
-            <p>Precio</p>
-            <p>Cantidad</p>
+    <main>
+        <div class="container-section">
+            <section class="my-order">
+                <div class="my-order-container">
+                    <div class="title-container">
+                        <i class="fa-solid fa-arrow-left" onclick="redireccionar_pedidos()"></i>
+                        <h1 class="title">My Order</h1>
+                    </div>
+                    <div class="my-order-content">
+                        <div class="order">
+                            <p class="order-span">
+                                <span>04.25.21</span>
+                                <span>6 articles</span>
+                            </p>
+                            <p>$560.00</p>
+                        </div>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                        <ul class="cart-items">
+                            <i class="fa fa-times-circle"></i>
+                        </ul>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                        <ul class="cart-items">
+                            <i class="fa fa-times-circle"></i>
+                        </ul>
+                    </div>
+                    <div class="shopping-cart">
+                        <figure>
+                            <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="bike">
+                        </figure>
+                        <p>Bike</p>
+                        <p>$30,00</p>
+                        <ul class="cart-items">
+                            <i class="fa fa-times-circle"></i>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="container-codigo">
+                <img src="./assets/img/logo.png" class="logo_jugueria" alt="logo de la jugueria" >
+                <button>Generar Código</button>
+            </section>
         </div>
-        <ul class="cart-items">
-            <i class="fa fa-times-circle"></i>
-        </ul>
-        <p>
-            Total: S/
-            <span class="cart-total">0</span>
-        </p>
-    </aside>
+    </main>
     <script src="./js/agregar_carrito.js"></script>
     <script src="./js/redireccionar.js"></script>
 </body>

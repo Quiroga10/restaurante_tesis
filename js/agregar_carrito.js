@@ -1,3 +1,4 @@
+let productosSeleccionados = [];
 //obtener el contenedor padre de los productos
 const containerPreview = document.querySelector('.carousel-row');
 let productos;
@@ -73,22 +74,23 @@ function cargarProductos(init,numPage) {
             actualizarCarrito();
         }
         function agregarItemAlCarrito(producto, precio) {
-            for (let i = 0; i < carrito.length; i++) {
-                const item = carrito[i];
-                if (item.producto === producto) {
-                    item.cantidad++;
-                    return;
-                }
+            let productoExistente = productosSeleccionados.find(
+                (item) => item.producto === producto
+            );
+
+            if (productoExistente){
+                productoExistente.cantidad++;
+            }else{
+                productosSeleccionados.push({ producto, precio, cantidad: 1});
             }
-            carrito.push({ producto, precio, cantidad: 1 });
         }
         function actualizarCarrito() {
             const carritoItems = document.querySelector('.cart-items');
             carritoItems.innerHTML = '';
 
             let total = 0;
-            for (let i = 0; i < carrito.length; i++) {
-                const item = carrito[i];
+            for (let i = 0; i < productosSeleccionados.length; i++) {
+                const item = productosSeleccionados[i];
 
                 const itemCarrito = document.createElement('li');
                 itemCarrito.classList.add('cart-item');
@@ -113,7 +115,7 @@ function cargarProductos(init,numPage) {
             totalCarrito.textContent = total.toFixed(2);
 
             const botonesEliminar = document.querySelectorAll('.fa-times-circle');
-            if (carrito.length > 0) {
+            if (productosSeleccionados.length > 0) {
                 botonesEliminar.forEach(boton => {
                     boton.style.display = 'inline-block';
                 });
@@ -122,11 +124,11 @@ function cargarProductos(init,numPage) {
                     boton.style.display = 'none';
                 });
             }
-            localStorage.setItem('carrito',JSON.stringify(carrito));
+            localStorage.setItem('carrito',JSON.stringify(productosSeleccionados));
         }
         function eliminarItemDelCarrito(index) {
-            carrito.splice(index, 1);
-            localStorage.setItem('carrito',JSON.stringify(carrito));
+            productosSeleccionados.splice(index, 1);
+            localStorage.setItem('carrito',JSON.stringify(productosSeleccionados));
         }
     });
 }
